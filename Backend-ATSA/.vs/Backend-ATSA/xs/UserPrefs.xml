@@ -1,0 +1,53 @@
+﻿<Properties StartupConfiguration="{C5308118-F939-4209-8180-D827E46D4EF5}|https">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Backend-ATSA PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="DataAccess/ApplicationDbContext.cs">
+    <Files>
+      <File FileName="Controllers/UsuarioController.cs" />
+      <File FileName="DataAccess/Repositories/Interfaces/IUsuarioRepository.cs" />
+      <File FileName="DataAccess/Repositories/UsuarioRepository.cs" />
+      <File FileName="DTOs/UsuarioDetalleDto.cs" />
+      <File FileName="DTOs/UsuarioRegistroDto.cs" />
+      <File FileName="DTOs/UsuarioActualizacionDto.cs" />
+      <File FileName="Entities/Alumno.cs" />
+      <File FileName="Entities/Docente.cs" />
+      <File FileName="Entities/Materia.cs" />
+      <File FileName="Entities/Carrera.cs" />
+      <File FileName="Entities/Plan.cs" />
+      <File FileName="Entities/PlanMateria.cs" />
+      <File FileName="Entities/Regularidad.cs" />
+      <File FileName="Entities/Cursada.cs" />
+      <File FileName="Entities/CursadaAlumno.cs" />
+      <File FileName="Entities/Examen.cs" />
+      <File FileName="Entities/ExamenAlumno.cs" />
+      <File FileName="Entities/Usuario.cs" />
+      <File FileName="DataAccess/ApplicationDbContext.cs" Line="49" Column="10" />
+      <File FileName="appsettings.json" />
+      <File FileName="Entities/Equivalencia.cs" />
+      <File FileName="Entities/CicloLectivo.cs" />
+      <File FileName="Entities/Rol.cs" />
+      <File FileName="DataAccess/Repositories/Interfaces/IAlumnoRepository.cs" />
+      <File FileName="DataAccess/Repositories/AlumnoRepository.cs" />
+      <File FileName="Entities/Correlatividad.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Backend-ATSA" expanded="True">
+            <Node name="Backend-ATSA" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="DataAccess" expanded="True">
+                <Node name="ApplicationDbContext.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>
