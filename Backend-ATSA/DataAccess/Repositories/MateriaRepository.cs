@@ -15,7 +15,7 @@ namespace Backend_ATSA.DataAccess.Repositories
             _context = context;
         }
 
-        public async Task<List<Materia>> ObtenerMaterias(int planid)
+        public async Task<List<Materia>> ObtenerMateriasPorPlan(int planid)
         {
             var lista = _context.Set<PlanMateria>()
                               .Where(pm => pm.Plan.Id == planid && pm.Plan.Eliminado == 0 && pm.Materia.Eliminado == 0)

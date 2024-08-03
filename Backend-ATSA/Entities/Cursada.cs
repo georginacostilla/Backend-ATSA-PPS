@@ -10,6 +10,7 @@ namespace Backend_ATSA.Entities
 		public Materia Materia { get; set; }
 		public Docente Docente { get; set; }
 		public ICollection<CursadaAlumno> CursadaAlumnos { get; set; }
+        public int Eliminado { get; set; } = 0;
     }
 
 	public enum Regimen

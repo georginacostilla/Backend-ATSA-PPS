@@ -18,9 +18,9 @@ namespace Backend_ATSA.Controllers
         }
 
         [HttpGet("Carrera/{id}")]
-        public async Task<IActionResult> ObtenerCiclosLectivos([FromRoute] int id)
+        public async Task<IActionResult> ObtenerPlanesPorCarrera([FromRoute] int id)
         {
-            var lista = await _planRepository.ObtenerPlanes(id);
+            var lista = await _planRepository.ObtenerPlanesPorCarrera(id);
 
             return ResponseFactory.CreateSuccessResponse(200, lista);
         }

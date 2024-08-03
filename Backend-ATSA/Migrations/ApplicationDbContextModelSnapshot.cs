@@ -157,6 +157,9 @@ namespace Backend_ATSA.Migrations
                     b.Property<int>("DocenteId")
                         .HasColumnType("int");
 
+                    b.Property<int>("Eliminado")
+                        .HasColumnType("int");
+
                     b.Property<int>("MateriaId")
                         .HasColumnType("int");
 
@@ -407,16 +410,14 @@ namespace Backend_ATSA.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Eliminado")
+                        .HasColumnType("int");
+
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PlanId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("PlanId");
 
                     b.ToTable("Materias");
                 });
@@ -460,7 +461,7 @@ namespace Backend_ATSA.Migrations
                     b.Property<int>("MateriaId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("PlanId")
+                    b.Property<int>("PlanId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -686,17 +687,6 @@ namespace Backend_ATSA.Migrations
                     b.Navigation("Docente");
                 });
 
-            modelBuilder.Entity("Backend_ATSA.Entities.Materia", b =>
-                {
-                    b.HasOne("Backend_ATSA.Entities.Plan", "Plan")
-                        .WithMany()
-                        .HasForeignKey("PlanId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Plan");
-                });
-
             modelBuilder.Entity("Backend_ATSA.Entities.Plan", b =>
                 {
                     b.HasOne("Backend_ATSA.Entities.Carrera", "Carrera")
@@ -716,11 +706,15 @@ namespace Backend_ATSA.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Backend_ATSA.Entities.Plan", null)
+                    b.HasOne("Backend_ATSA.Entities.Plan", "Plan")
                         .WithMany("PlanMaterias")
-                        .HasForeignKey("PlanId");
+                        .HasForeignKey("PlanId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Materia");
+
+                    b.Navigation("Plan");
                 });
 
             modelBuilder.Entity("Backend_ATSA.Entities.Regularidad", b =>

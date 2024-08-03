@@ -86,6 +86,8 @@ builder.Services.AddScoped<IAlumnoRepository, AlumnoRepository>();
 builder.Services.AddScoped<ICicloLectivoRepository, CicloLectivoRepository>();
 builder.Services.AddScoped<ICarreraRepository, CarreraRepository>();
 builder.Services.AddScoped<IPlanRepository, PlanRepository>();
+builder.Services.AddScoped<IMateriaRepository, MateriaRepository>();
+builder.Services.AddScoped<ICursadaRepository, CursadaRepository>();
 
 var app = builder.Build();
 

@@ -14,7 +14,7 @@ namespace Backend_ATSA.DataAccess.Repositories
             _context = context;
         }
 
-        public async Task<List<Plan>> ObtenerPlanes(int carreraid)
+        public async Task<List<Plan>> ObtenerPlanesPorCarrera(int carreraid)
         {
             var lista = await _context.Set<Plan>()
                 .Where(plan => (int)plan.Eliminado == 0 && plan.CarreraId == carreraid)

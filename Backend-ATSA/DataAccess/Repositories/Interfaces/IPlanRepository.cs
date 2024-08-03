@@ -5,7 +5,7 @@ namespace Backend_ATSA.DataAccess.Repositories.Interfaces
 {
 	public interface IPlanRepository
 	{
-        public Task<List<Plan>> ObtenerPlanes(int carreraid);
+        public Task<List<Plan>> ObtenerPlanesPorCarrera(int carreraid);
     }
 }
 

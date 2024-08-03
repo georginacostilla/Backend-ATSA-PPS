@@ -5,7 +5,7 @@ namespace Backend_ATSA.DataAccess.Repositories.Interfaces
 {
 	public interface IMateriaRepository
 	{
-        public Task<List<Carrera>> ObtenerCarreras(int planid);
+        public Task<List<Materia>> ObtenerMateriasPorPlan(int planid);
     }
 }
 
